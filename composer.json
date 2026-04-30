@@ -1,0 +1,71 @@
+{
+  "name": "celsonery/laravel-viacep",
+  "description": "A little Laravel package for integration with viacep api.",
+  "keywords": [
+    "celsonery",
+    "laravel",
+    "laravel-viacep",
+    "viacep",
+    "cep"
+  ],
+  "homepage": "https://github.com/celsonery/laravel-viacep",
+  "version": "1.0.0",
+  "type": "library",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/celsonery/laravel-viacep/issues",
+    "source": "https://github.com/celsonery/laravel-viacep"
+  },
+  "autoload": {
+    "psr-4": {
+      "CelsoNery\\ViaCep\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "CelsoNery\\ViaCep\\Tests\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Celso Nery",
+      "email": "celso.nery@gmail.com",
+      "role": "Maintainer"
+    }
+  ],
+  "extra": {
+    "laravel": {
+      "providers": [
+        "CelsoNery\\ViaCep\\Providers\\ViaCepServiceProvider"
+      ],
+      "aliases": {
+        "ViaCep": "CelsoNery\\ViaCep\\Facades\\ViaCep"
+      }
+    }
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^8.2",
+    "illuminate/support": "^11.0|^12.0|^13.0",
+    "illuminate/http": "^11.0|^12.0|^13.0"
+  },
+  "require-dev": {
+    "pestphp/pest": "^4.6",
+    "pestphp/pest-plugin-laravel": "^4.1",
+    "orchestra/testbench": "^11.1",
+    "laravel/pint": "^1.29"
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "scripts": {
+    "lint": "pint --test",
+    "lint:fix": "pint",
+    "tests": [
+      "@lint",
+      "pest"
+    ]
+  }
+}
